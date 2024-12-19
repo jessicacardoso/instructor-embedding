@@ -12,7 +12,7 @@ from sentence_transformers.models import Transformer
 from torch import Tensor, nn
 from tqdm.autonotebook import trange
 from transformers import AutoConfig, AutoTokenizer
-from sentence_transformers.util import disabled_tqdm
+# from sentence_transformers.util import disabled_tqdm
 from huggingface_hub import snapshot_download
 
 
@@ -534,7 +534,7 @@ class INSTRUCTOR(SentenceTransformer):
                 "library_name": "InstructorEmbedding",
                 "token": token,
                 "cache_dir": cache_folder,
-                "tqdm_class": disabled_tqdm,
+                # "tqdm_class": disabled_tqdm,
             }
 
         # Check if the config_sentence_transformers.json file exists (exists since v2 of the framework)
